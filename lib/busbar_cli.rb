@@ -1,0 +1,49 @@
+require 'json'
+require 'thor'
+require 'active_support'
+require 'virtus'
+
+require 'busbar_cli/commands'
+require 'busbar_cli/config'
+require 'busbar_cli/helpers'
+require 'busbar_cli/models'
+require 'busbar_cli/repositories'
+require 'busbar_cli/services'
+
+class BusbarCLI < Thor
+  include Commands::Apps
+  include Commands::AppConfig
+  include Commands::Clone
+  include Commands::Version
+  include Commands::Environments
+  include Commands::Create
+  include Commands::CreateDatabase
+  include Commands::Show
+  include Commands::ShowDatabase
+  include Commands::Databases
+  include Commands::Destroy
+  include Commands::DestroyDatabase
+  include Commands::Settings
+  include Commands::Url
+  include Commands::Set
+  include Commands::Get
+  include Commands::Unset
+  include Commands::Deploy
+  include Commands::Publish
+  include Commands::Scale
+  include Commands::Resize
+  include Commands::Containers
+  include Commands::Logs
+  include Commands::Wtf
+  include Commands::Ssh
+  include Commands::Profile
+  include Commands::Profiles
+  include Commands::Console
+  include Commands::FetchBuildLogs
+  include Commands::LatestBuild
+  include Commands::BusbarSetup
+  include Commands::KubeConfigUpdate
+  include Commands::BusbarVersion
+  include Commands::Copy
+  include Commands::Exec
+end

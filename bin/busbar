@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'busbar_cli'
+
+BusbarCLI.start(ARGV)
