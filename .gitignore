@@ -1,0 +1,4 @@
+.busbar.yml
+*.gem
+
+/coverage

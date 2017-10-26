@@ -1,0 +1,67 @@
+Style/PercentLiteralDelimiters:
+  Description: "Use `%`-literal delimiters consistently"
+  Enabled: true
+  PreferredDelimiters:
+    "%w": "()"
+    "%W": "()"
+
+Style/WordArray:
+  Description: "Use %w or %W for arrays of words."
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 100
+
+Metrics/AbcSize:
+  Max: 100
+
+Metrics/ParameterLists:
+  Max: 24
+
+Metrics/CyclomaticComplexity:
+  Max: 24
+
+Metrics/PerceivedComplexity:
+  Max: 28
+
+Style/NestedModifier:
+  Enabled: false
+
+Style/IfUnlessModifierOfIfUnless:
+  Enabled: false
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
+
+Style/EachWithObject:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ExtraSpacing:
+  Enabled: false
+
+FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/OptionalArguments:
+  Enabled: false
+
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'busbar_cli.gemspec'
+    - 'Rakefile'
+    - 'omnibus/**/*'
+    - 'Formula/*'
