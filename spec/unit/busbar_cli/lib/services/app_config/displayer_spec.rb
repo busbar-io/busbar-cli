@@ -14,7 +14,7 @@ Options:
   [--environment=ENVIRONMENT]  # Environment to be used in further commands
   [--component=COMPONENT]      # Component to be used in further commands
   [--reset], [--no-reset]      # Reset all of your configs
-  [--unset=UNSET]              # Config to be unsetted
+  [--unset=UNSET]              # Config to be unset
 
 Local application CLI configuration.
 

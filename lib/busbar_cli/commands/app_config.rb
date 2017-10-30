@@ -15,7 +15,7 @@ module Commands
                     desc: 'Reset all of your configs',
                     type: :boolean
       method_option :unset,
-                    desc: 'Config to be unsetted'
+                    desc: 'Config to be unset'
 
       def app_config
         return Services::AppConfig::Displayer.call if options.empty?

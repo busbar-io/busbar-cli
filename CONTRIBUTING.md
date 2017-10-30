@@ -13,4 +13,4 @@ Please note we have a code of conduct, please follow it in all your interactions
    commands, useful file locations and parameters.
 3. Update the CHANGELOG.md file with a brief description of the changes on an '# Unreleased' session
    on the top of the file.
-4. Once your Pull Request is aproved it will be merged and release by one of our core mainteners.
+4. Once your Pull Request is aproved it will be merged and released by one of our core mainteners.
