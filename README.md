@@ -16,7 +16,7 @@ This is a Command Line Interface for the Busbar APIs.
   busbar -f /path/to/configuration/file
   ```
 
-* Passing interactivelly the needed configuration keys:
+* With interactive prompts:
   ```sh
   busbar -a
   ```
