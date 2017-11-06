@@ -3,9 +3,13 @@ require 'yaml'
 module Helpers
   class BusbarConfig
     CONFIG_OPTIONS = {
-      default_git_branch: {
-        text: 'Please provide the default git branch',
-        default: 'master'
+      busbar_api_url: {
+        text: 'Please provide the Busbar API URL',
+        default: nil
+      },
+      busbar_profile: {
+        text: 'Please provide the Busbar profile',
+        default: nil
       },
       kubectl_config_url: {
         text: 'Please provide the kubectl remote configuration URL',
@@ -15,9 +19,9 @@ module Helpers
         text: 'Please provide the kubectl configuration version URL',
         default: nil
       },
-      busbar_profile: {
-        text: 'Please provide the Busbar profile',
-        default: nil
+      default_git_branch: {
+        text: 'Please provide the default git branch',
+        default: 'master'
       }
     }.freeze
 

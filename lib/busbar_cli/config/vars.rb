@@ -19,14 +19,18 @@ Services::BusbarConfig.first_run unless File.file?(BUSBAR_CONFIG_FILE_PATH)
 ## Overwriteable
 DOCKER_PRIVATE_REGISTRY     = ENV.fetch('DOCKER_PRIVATE_REGISTRY', '127.0.0.1:5000').freeze
 CONFIG_FILE_PATH            = ENV.fetch('BUSBAR_CONFIG_FILE_PATH', '.busbar.yml').freeze
-DEFAULT_BRANCH              = ENV.fetch('BRANCH',
-                                        Services::BusbarConfig.get('default_git_branch')).freeze
+
+## Set on config file
+BUSBAR_API_URL              = ENV.fetch('BUSBAR_API_URL',
+                                        Services::BusbarConfig.get('busbar_api_url')).freeze
+BUSBAR_PROFILE              = ENV.fetch('BUSBAR_PROFILE',
+                                        Services::BusbarConfig.get('busbar_profile')).freeze
 KUBECTL_CONFIG_FILE_URL     = ENV.fetch('KUBECTL_CONFIG_FILE_URL',
                                         Services::BusbarConfig.get('kubectl_config_url')).freeze
 KUBECTL_CONFIG_VERSION_URL  = ENV.fetch('KUBECTL_CONFIG_FILE_URL',
                                         Services::BusbarConfig.get('kubectl_config_version_url')).freeze
-BUSBAR_PROFILE              = ENV.fetch('BUSBAR_PROFILE',
-                                        Services::BusbarConfig.get('busbar_profile')).freeze
+DEFAULT_BRANCH              = ENV.fetch('BRANCH',
+                                        Services::BusbarConfig.get('default_git_branch')).freeze
 
 Services::Kube.setup unless File.file?(KUBECTL_CONFIG_FILE) && \
                             File.file?(KUBECTL_CONFIG_VERSION_FILE) && File.file?(KUBECTL)
