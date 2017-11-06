@@ -4,6 +4,9 @@
 ### Add
 - Add BUSBAR_API_URL configuration variable
 
+### Fix
+- Fix rspec tests
+
 ## [1.5.1] - 2017-11-1
 ### Fix
 - Documentation fixes
