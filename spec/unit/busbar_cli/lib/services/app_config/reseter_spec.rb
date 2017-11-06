@@ -25,7 +25,7 @@ RSpec.describe Services::AppConfig::Reseter do
         subject
       rescue SystemExit
         expect(described_class).to have_received(:puts)
-          .with('Application configuration reseted with success.').once
+          .with('Application configuration reset with success.').once
       end
     end
 
@@ -36,7 +36,7 @@ RSpec.describe Services::AppConfig::Reseter do
         expect(Confirmator).to have_received(:confirm).with(
           question: 'Are you sure you want to reset all of your application configs? ' \
                     'This action is irreversible.',
-          exit_message: 'Exiting without reseting application configs.'
+          exit_message: 'Exiting without resetting application configs.'
         )
       end
     end

@@ -21,6 +21,7 @@ TEST_KUBECTL_CONFIG_VERSION_FILE = "#{TEST_KUBECTL_LOCAL_FOLDER}/config_version"
 TEST_KUBECTL = "#{TEST_KUBECTL_LOCAL_BIN_FOLDER}/kubectl-#{VERSION}.#{KUBECTL_PATCH_VERSION}".freeze
 
 busbar_config_hash = {
+  busbar_api_url: 'http://busbar.fake.profile',
   default_git_branch: 'default_git_branch',
   kubectl_config_url: 'kubectl_config_url',
   kubectl_config_version_url: 'kubectl_config_version_url',
