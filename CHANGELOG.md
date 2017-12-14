@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [1.7.0] - 2017-12-14
+### Upgrade
+- Upgrade kubectl version to 1.7
+
 ## [1.6.0] - 2017-12-14
 ### Upgrade
 - Upgrade kubectl version to 1.6
