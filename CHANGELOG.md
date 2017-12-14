@@ -1,6 +1,9 @@
 # CHANGELOG
 
-## Unreleased
+## [1.6.0] - 2017-12-14
+### Upgrade
+- Upgrade kubectl version to 1.6
+
 ### Add
 - Add BUSBAR_API_URL configuration variable
 
