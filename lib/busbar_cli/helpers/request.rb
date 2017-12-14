@@ -33,7 +33,7 @@ class Request
     end
 
     def api_url
-      "http://busbar.#{Services::Kube.current_profile}"
+      BUSBAR_API_URL
     end
 
     def execute(request)
