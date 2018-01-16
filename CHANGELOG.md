@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## [1.8.1] - 2018-01-16
 ### Add
 - Add fetch Busbar config from URL
 
