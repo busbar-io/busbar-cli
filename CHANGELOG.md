@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Unreleased
+### Add
+- Add fetch Busbar config from URL
+
 ## [1.8.0] - 2017-12-14
 ### Upgrade
 - Upgrade kubectl version to 1.8

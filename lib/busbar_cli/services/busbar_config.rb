@@ -35,6 +35,16 @@ module Services
           write_from_file(file_path)
           current
 
+        elsif (ARGV[selector_position] == '-u') || (ARGV[selector_position] == '--url') || \
+              (ARGV[selector_position] =~ /--url.*$/)
+          url = if ARGV[selector_position].include?('=')
+                        ARGV[selector_position].split('=')[1]
+                      else
+                        ARGV[selector_position + 1]
+                      end
+          write_from_url(url)
+          current
+
         else
           puts
           puts 'Busbar Config file not found!'
@@ -42,6 +52,7 @@ module Services
           puts 'Current Options:'
           puts '  -a, [--i-set-all]      # Set all configuration keys interactivelly'
           puts '  -f, [--file=FILE]      # Create the busbar config using an external file'
+          puts '  -u, [--url=URL]        # Create the busbar config using an external URL'
           puts
         end
         exit(0)
@@ -75,6 +86,13 @@ module Services
       def write_from_file(file_path)
         Helpers::BusbarConfig.ensure_dependencies
         FileUtils.copy(File.expand_path(file_path), BUSBAR_CONFIG_FILE_PATH)
+      end
+
+      def write_from_url(url)
+        response = Net::HTTP.get(URI(url))
+        open(BUSBAR_CONFIG_FILE_PATH, 'wb') do |file|
+          file.write(response)
+        end
       end
 
       def interactive_set(config_key)

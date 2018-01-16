@@ -4,7 +4,7 @@ require 'busbar_cli/config/version'
 # Constants
 ## Hardcoded
 BUSBAR_LOCAL_FOLDER         = "#{ENV['HOME']}/.busbar".freeze
-BUSBAR_CONFIG_FILE_PATH     = "#{BUSBAR_LOCAL_FOLDER}/config".freeze
+BUSBAR_CONFIG_FILE_PATH     = "#{BUSBAR_LOCAL_FOLDER}/busbar.config".freeze
 
 KUBECTL_LOCAL_FOLDER        = "#{ENV['HOME']}/.kube".freeze
 KUBECTL_LOCAL_BIN_FOLDER    = "#{KUBECTL_LOCAL_FOLDER}/bin".freeze
