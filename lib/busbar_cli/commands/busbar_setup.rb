@@ -50,6 +50,10 @@ module Commands
              aliases: '-f',
              desc: 'Create the busbar config using an external file'
 
+      option :url,
+             aliases: '-u',
+             desc: 'Create the busbar config using an external URL'
+
       def busbar_setup
         if options.keys.count > 1
           puts
@@ -107,6 +111,21 @@ module Commands
             exit(0) if overwrite_existing == 'No'
           end
           Services::BusbarConfig.write_from_file(options.file)
+
+        elsif options.url?
+          if File.file?(BUSBAR_CONFIG_FILE_PATH)
+            thor_ask = Thor::Shell::Basic.new
+            puts
+            puts 'Busbar config file already exists with the content bellow:'
+            puts
+            Services::BusbarConfig.current
+            puts
+            overwrite_existing = thor_ask.ask('Overwrite it',
+                                              default: 'Yes',
+                                              limited_to: %w(Yes No))
+            exit(0) if overwrite_existing == 'No'
+          end
+          Services::BusbarConfig.write_from_url(options.url)
 
         else
           Services::BusbarConfig.current
