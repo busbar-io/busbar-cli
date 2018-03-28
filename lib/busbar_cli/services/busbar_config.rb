@@ -89,6 +89,7 @@ module Services
       end
 
       def write_from_url(url)
+        Helpers::BusbarConfig.ensure_dependencies
         response = Net::HTTP.get(URI(url))
         open(BUSBAR_CONFIG_FILE_PATH, 'wb') do |file|
           file.write(response)
