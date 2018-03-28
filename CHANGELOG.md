@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [1.9.1] - 2018-03-28
+### Fix
+- Fix busbar config directory criation on fetch config from URL
+- Support multicontainers in a single pod
+
 ## [1.9.0] - 2018-03-21
 ### Upgrade
 - Upgrade kubectl version to 1.9
