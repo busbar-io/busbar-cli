@@ -3,8 +3,8 @@ module Commands
     extend ActiveSupport::Concern
 
     included do
-      desc 'logs APP_OR_CONTAINER ENV [COMPONENT_TYPE]',
-           'Fetch the logs from a component or container'
+      desc 'logs APPLICATION_CONTAINER ENV [COMPONENT_TYPE]',
+        'Fetch the logs from a application container. You can find the container for your application through the "busbar containers" command.'
       method_option :since,
                     default: '0',
                     type: :string,
