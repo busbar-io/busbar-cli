@@ -25,20 +25,30 @@ module Commands
         app_id = Services::AppConfig.get_or_exit('app'),
         environment_name = Services::AppConfig.get_or_exit('environment')
       )
-        Services::Kube.configure_temporary_profile(options.profile)
+        if BUSBAR_PROFILE == 'minikube'
+          minikube_ip = `minikube ip | tr -d '\n'`
+          service_nodeport = `kubectl \
+                                --namespace test get service/example-ruby \
+                                -o jsonpath="{.spec.ports[0].nodePort}"`
 
-        environment = EnvironmentsRepository.find(
-          app_id: app_id,
-          environment_name: environment_name
-        )
+          url = "http://#{minikube_ip}:#{service_nodeport}/"
+        else
+          Services::Kube.configure_temporary_profile(options.profile)
 
-        url = if options.internal
-                Services::Url.internal(environment)
-              elsif options.ingress || !environment.public
-                Services::Url.ingress(environment)
-              elsif options.public
-                Services::Url.public(environment)
-              end
+          environment = EnvironmentsRepository.find(
+            app_id: app_id,
+            environment_name: environment_name
+          )
+
+          url = if options.internal
+                  Services::Url.internal(environment)
+                elsif options.ingress || !environment.public
+                  Services::Url.ingress(environment)
+                elsif options.public
+                  Services::Url.public(environment)
+                end
+
+        end
 
         puts url
       end

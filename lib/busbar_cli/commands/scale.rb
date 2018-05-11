@@ -12,15 +12,19 @@ module Commands
         component_type = Services::AppConfig.get_or_exit('component'),
         scale
       )
-        Services::Kube.configure_temporary_profile(options.profile)
+        if BUSBAR_PROFILE == 'minikube'
+          puts 'Scale not allowed when using "minikube" profile'
+        else
+          Services::Kube.configure_temporary_profile(options.profile)
 
-        component = Component.new(
-          app_id: app_id,
-          environment_name: environment_name,
-          type: component_type
-        )
+          component = Component.new(
+            app_id: app_id,
+            environment_name: environment_name,
+            type: component_type
+          )
 
-        Services::Scaler.call(component, scale)
+          Services::Scaler.call(component, scale)
+        end
       end
     end
   end
