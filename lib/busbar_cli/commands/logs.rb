@@ -4,7 +4,7 @@ module Commands
 
     included do
       desc 'logs APPLICATION_CONTAINER ENV [COMPONENT_TYPE]',
-        'Fetch the logs from a application container. You can find the container for your application through the "busbar containers" command.'
+           'Fetch the logs from a application container. You can find the container for your application through the "busbar containers" command.'
       method_option :since,
                     default: '0',
                     type: :string,

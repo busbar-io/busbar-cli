@@ -10,14 +10,20 @@ Style/WordArray:
   Enabled: true
 
 Metrics/LineLength:
+  Max: 160
+
+Metrics/ModuleLength:
+  Max: 120
+
+Metrics/ClassLength:
   Max: 120
 
 Metrics/MethodLength:
   CountComments: false
-  Max: 100
+  Max: 120
 
 Metrics/AbcSize:
-  Max: 100
+  Max: 110
 
 Metrics/ParameterLists:
   Max: 24

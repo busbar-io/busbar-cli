@@ -38,10 +38,10 @@ module Services
         elsif (ARGV[selector_position] == '-u') || (ARGV[selector_position] == '--url') || \
               (ARGV[selector_position] =~ /--url.*$/)
           url = if ARGV[selector_position].include?('=')
-                        ARGV[selector_position].split('=')[1]
-                      else
-                        ARGV[selector_position + 1]
-                      end
+                  ARGV[selector_position].split('=')[1]
+                else
+                  ARGV[selector_position + 1]
+                end
           write_from_url(url)
           current
 
