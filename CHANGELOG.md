@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Unreleased
+### Refactor
+- Refactor CLI to allow apps with names longer than 18 characters
+
 ## [1.9.1] - 2018-03-28
 ### Fix
 - Fix busbar config directory criation on fetch config from URL

@@ -30,9 +30,9 @@ module Services
     private
 
     def validate_id
-      return if @id.length < 17
+      return if @id.length < 54
 
-      puts 'The application name has to be shorter than 18 characters'
+      puts 'The application name has to be shorter than 54 characters'
       exit 1
     end
 
