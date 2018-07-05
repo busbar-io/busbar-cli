@@ -131,7 +131,7 @@ RSpec.describe Services::AppCreator do
         allow_any_instance_of(described_class).to receive(:exit)
 
         expect_any_instance_of(described_class).to receive(:puts)
-          .with('The application name has to be shorter than 18 characters')
+          .with('The application name has to be shorter than 54 characters')
           .once
 
         subject
