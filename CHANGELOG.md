@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Unreleased
+### Add
+- Add components to busbar show
+
 ## [1.9.2] - 2018-06-05
 ### Refactor
 - Refactor CLI to allow apps with names longer than 18 characters
