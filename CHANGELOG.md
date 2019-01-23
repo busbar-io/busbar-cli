@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## [1.9.3] - 2019-01-23
 ### Add
 - Add components to busbar show
 - Add busbar nodetypes command - Fetch data of available nodetypes
