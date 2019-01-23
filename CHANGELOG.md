@@ -3,6 +3,7 @@
 ## Unreleased
 ### Add
 - Add components to busbar show
+- Add busbar nodetypes command - Fetch data of available nodetypes
 
 ## [1.9.2] - 2018-06-05
 ### Refactor
