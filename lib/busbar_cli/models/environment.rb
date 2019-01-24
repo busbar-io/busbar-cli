@@ -13,6 +13,7 @@ class Environment
   attribute :public, Boolean
   attribute :created_at, String
   attribute :updated_at, String
+  attribute :components, Array
 
   def as_text
     "App: #{app_id}\n" \
@@ -25,6 +26,7 @@ class Environment
     "Default Branch: #{default_branch}\n" \
     "Default Node ID: #{default_node_id}\n" \
     "Settings: \n#{pretty_settings}\n" \
+    "Components: \n#{pretty_components}\n" \
     "Created_at: #{created_at}\n" \
     "Updated_at: #{updated_at}"
   end
@@ -35,5 +37,13 @@ class Environment
     settings.sort.map do |setting, value|
       "\t#{setting}: #{value}"
     end.join("\n")
+  end
+
+  def pretty_components
+    components.sort_by(&:first).map do |component|
+      component.map do |attribute, value|
+        "\t#{attribute}: #{value}"
+      end.join("\n")
+    end.join("\n\t--\n")
   end
 end
