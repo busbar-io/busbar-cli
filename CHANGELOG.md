@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [1.9.4] - 2019-07-30
+### Fix
+- Fix busbar logs issue with dashes in the application name
+
 ## [1.9.3] - 2019-01-23
 ### Add
 - Add components to busbar show
