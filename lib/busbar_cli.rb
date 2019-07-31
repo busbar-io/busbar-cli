@@ -46,5 +46,5 @@ class BusbarCLI < Thor
   include Commands::BusbarVersion
   include Commands::Copy
   include Commands::Exec
-  include Commands::NodeTypes
+  include Commands::Nodetypes
 end

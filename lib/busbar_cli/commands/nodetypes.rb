@@ -1,12 +1,12 @@
 module Commands
-  module NodeTypes
+  module Nodetypes
     extend ActiveSupport::Concern
 
     included do
       desc 'nodetypes', 'Show available Busbar Nodetypes'
 
       def nodetypes ()
-        resources = NodeTypesRepository.all()
+        resources = NodetypesRepository.all()
 
         resources.map do |resource|
           Printer.print_resource(resource)

@@ -1,4 +1,4 @@
-class NodeType
+class Nodetype
   include Virtus.model
 
   attribute :id, String
@@ -7,6 +7,6 @@ class NodeType
   attribute :memory, String
 
   def as_text
-    "#{id} =>\tCPU: #{cpu} \tMemory: #{memory}"
+    "#{id} =>\tCPU: #{cpu}\tMemory: #{memory}"
   end
 end

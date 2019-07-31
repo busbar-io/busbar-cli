@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## [1.9.3] - 2019-01-23
 ### Add
 - List components within 'busbar show'
 - Ability to fetch data of available Nodetypes with 'busbar nodetypes'
