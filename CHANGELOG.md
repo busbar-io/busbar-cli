@@ -1,8 +1,14 @@
 # CHANGELOG
 
-## [1.9.4] - 2019-07-30
+## [1.9.4] - 2019-08-01
 ### Fix
 - Fix busbar logs issue with dashes in the application name
+
+### Remove
+- Remove Busbar Server side application logs calls
+
+### Refactor
+- Refactor busbar logs to work with the app ID instead of the pod/container name
 
 ## [1.9.3] - 2019-01-23
 ### Add
