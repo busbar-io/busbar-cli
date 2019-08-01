@@ -27,6 +27,13 @@ class EnvironmentsRepository
       Environment.new(environment_data)
     end
 
+    def get(environment_name, app_id)
+      @environment_name = environment_name
+      @app_id = app_id
+
+      Request.get(environment_route).body
+    end
+
     def create(params)
       @app_id = params[:app_id]
 
